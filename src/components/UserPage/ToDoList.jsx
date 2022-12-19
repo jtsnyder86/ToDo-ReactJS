@@ -17,9 +17,15 @@ function ToDoList({ list }) {
     return (
         <>
             {list.map(todo => (
-               <ul>
-                <li>{todo.task}</li>
-               </ul> )
+               <form>
+                <label>
+                    <input 
+                    type="radio"
+                    value={todo.id}
+                    id={todo.id}/>
+                 {todo.task}
+                 </label>
+               </form> )
             )}
         </>
     )
